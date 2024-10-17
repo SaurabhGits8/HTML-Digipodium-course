@@ -38,3 +38,45 @@ do{
 }while(c>20)
 
 //WAP to check if a number is prime 
+const num1 = 5;
+let prime = true;
+
+for (let i = 2; i < num1 / 2; i++) {
+    if (num1 % i === 0) {
+        console.log('not prime');
+        prime = false;
+        break;
+    }
+}
+
+if (prime) console.log('prime');
+
+console.log('-------------------');
+
+for (let j = 1; j <= 30; j++) {
+    let prime = true;
+
+    for (let i = 2; i <= j / 2; i++) {
+        
+        if (j % i === 0) {
+            prime = false;
+            break;
+        }
+    }
+
+    if (prime) console.log(j);
+}
+// WAP  to reverse the given number 
+let num=123456;
+let reverse=0;
+
+while(num>0){
+    console.log(num,reverse);
+
+    let d=num%10;
+    reverse=reverse*10+d;
+    num= parseInt(num/10);
+
+}
+
+console.log(reverse);
